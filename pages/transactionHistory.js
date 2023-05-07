@@ -14,6 +14,7 @@ import { useQuery } from "@apollo/client";
 import {
   ANGEL_ADDRESS,
   ASSETS,
+  DEFAULT_PROFILE_IMAGE,
   addAngelSuffix,
   convertTimeStampToReadableDate,
   handleCopyClick,
@@ -126,7 +127,7 @@ export default function TransactionHistory() {
                                 setClicked(tx.id);
                               }}
                             >
-                              <img src="https://bafybeib3faghcn66ax5o5enqk3vfzp23senitu5vlbjh4ceus5fhmyskpe.ipfs.w3s.link/adventure%20time%204.jpg" />
+                              <img src={DEFAULT_PROFILE_IMAGE} />
 
                               <div className={styles.info}>
                                 <h3>{addAngelSuffix(tx.senderUserName)}</h3>

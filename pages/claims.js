@@ -16,6 +16,7 @@ import {
   ANGEL_ADDRESS,
   ASSETS,
   CLAIM_IMAGE,
+  DEFAULT_PROFILE_IMAGE,
   addAngelSuffix,
   handleCopyClick,
   truncateAddr,
@@ -107,7 +108,7 @@ export default function Claims() {
                               }}
                               key={claim.id}
                             >
-                              <img src={CLAIM_IMAGE} />
+                              <img src={DEFAULT_PROFILE_IMAGE} />
 
                               <div className={styles.info}>
                                 <h3>{addAngelSuffix(claim.senderUserName)}</h3>
