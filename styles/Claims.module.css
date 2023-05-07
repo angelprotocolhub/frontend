@@ -133,8 +133,7 @@
   align-items: flex-start;
   box-shadow: 2px 2px 7px 3px #e6e6e6;
   border-radius: 14px;
-  height: 85vh;
-  /* background-color: #f6f6f6; */
+  height: 680px;
 }
 
 .claimSection p {
