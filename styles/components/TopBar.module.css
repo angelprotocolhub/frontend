@@ -1,0 +1,51 @@
+.topBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 30px 40px;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  border-bottom: 0.5px solid #9393933f;
+  width: 81%;
+  z-index: 2;
+}
+
+.topBar img {
+  width: 55px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.angelName {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.angelName p {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.topBar button {
+  background-color: #191919;
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 12px;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right img {
+  width: 40px;
+  height: 40px;
+}

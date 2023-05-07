@@ -1,0 +1,108 @@
+.senderBox {
+  padding: 10px 20px;
+  color: hsl(122, 54%, 13%);
+  width: 30%;
+  border-radius: 20px;
+  background-color: #eaeaea;
+  font-size: 18px;
+  margin: 15px;
+  position: relative;
+  left: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px;
+  height: 200px;
+}
+
+.senderTime {
+  position: relative;
+  left: 42%;
+  font-size: 12px !important;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 40px;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.miniBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 10px 20px 10px 0;
+}
+
+.miniBox span {
+  font-size: 13px;
+  color: #606060;
+}
+
+.miniBox p {
+  font-size: 18px;
+}
+
+.recipientBox {
+  padding: 10px 20px;
+  color: hsl(122, 54%, 13%);
+  width: 30%;
+  border-radius: 20px;
+  background-color: #191919;
+  font-size: 18px;
+  margin: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px;
+  height: 200px;
+}
+
+.recipientTime {
+  margin-left: 15px;
+  font-size: 12px !important;
+}
+
+.recipientBox p {
+  color: #fff;
+}
+
+.senderBox img {
+  width: 70px;
+  height: 70px;
+}
+
+.recipientBox img {
+  width: 70px;
+  height: 70px;
+}
+
+.check {
+  height: 37px !important;
+  width: 40px !important;
+}
+
+.narration {
+  font-size: 14px !important;
+  word-wrap: break-word !important;
+  margin-right: 30px !important;
+}

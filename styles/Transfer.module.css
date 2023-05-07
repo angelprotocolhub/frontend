@@ -1,0 +1,13 @@
+.content {
+  width: 100%;
+  margin-left: 19%;
+}
+
+.componentContent {
+  margin: 150px auto;
+  width: 90%;
+}
+
+.content {
+  position: relative;
+}

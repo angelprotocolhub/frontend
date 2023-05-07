@@ -1,0 +1,212 @@
+.content {
+  width: 100%;
+  margin-left: 19%;
+}
+
+.title {
+  font-size: 35px;
+  margin: 160px 0px 40px 0px;
+  padding-left: 50px;
+}
+
+.updateContainer {
+  padding-left: 50px;
+}
+
+.transactionsContainer {
+  display: flex;
+  margin: 125px 0px;
+  padding-left: 50px;
+}
+
+.txSection {
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 14px;
+  height: 68vh;
+  margin-top: 20px;
+}
+
+.txSection p {
+  font-size: 13px;
+  color: #757575;
+}
+
+.txSection h3 {
+  font-size: 20px;
+  color: #757575;
+  border-bottom: 1px solid #dbdbdb;
+  margin-bottom: 30px;
+  font-weight: 600;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.txRef {
+  font-size: 12px !important;
+}
+
+.txSection input {
+  font-size: 20px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 12px 0px;
+  margin-bottom: 10px;
+}
+
+.txSection input::placeholder {
+  color: #c9c9c9;
+}
+
+.txSection h2 {
+  font-size: 22px;
+}
+
+.txSection button {
+  background-color: #191919;
+  color: #fff;
+  padding: 10px 18px;
+  font-size: 18px;
+  border-radius: 14px;
+}
+
+.txSection button:hover {
+  background-color: #464646;
+}
+
+.status {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.status p {
+  margin-left: 10px;
+  font-size: 17px;
+}
+
+.pendingCircle {
+  width: 20px;
+  height: 20px;
+  background-color: #9a640e;
+  border-radius: 50%;
+}
+
+.successCircle {
+  width: 20px;
+  height: 20px;
+  background-color: #20b918;
+  border-radius: 50%;
+}
+
+.reclaimCircle {
+  width: 20px;
+  height: 20px;
+  background-color: #c301a6;
+  border-radius: 50%;
+}
+
+.dateAndTime {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.dateAndTime p {
+  font-size: 16px;
+  margin-right: 30px;
+}
+
+.updateContainer {
+  margin-top: 40px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.updateContainer h3 {
+  font-size: 22px;
+  color: #0d0221;
+  margin-bottom: 20px;
+}
+
+.checkTxDetails {
+  display: flex;
+  margin-right: 100px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.checkTxDetails input {
+  font-size: 16px;
+  background-color: transparent;
+  color: #0d0221;
+  padding: 10px 3px;
+  outline: none;
+  border: none;
+  margin-right: 20px;
+  border-bottom: 1px solid #bfbfbf;
+  width: 400px;
+}
+
+.checkTxDetails button {
+  background-color: #191919;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 19px;
+  border: none;
+  border-radius: 18px;
+}
+
+.checkTxDetails button:hover {
+  background-color: #474747;
+}
+
+.chengeProfilePhoto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.selectImage {
+  background-color: #0d0221;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 13px;
+  border-radius: 16px;
+  margin-right: 14px;
+}
+
+.selectImage:hover {
+  background-color: #202c42;
+  color: #fff;
+}
+
+.selectImage input {
+  display: none;
+}
+
+.setImage {
+  background-color: #374ac1;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 13px;
+  border-radius: 16px;
+}
+
+.setImage:hover {
+  background-color: #243080;
+}
+
+.fileDetails {
+  margin: 10px 3px;
+}

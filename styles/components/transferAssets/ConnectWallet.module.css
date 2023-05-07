@@ -1,0 +1,36 @@
+.connectWallet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.connectWallet img {
+  width: 450px;
+}
+
+.connectWallet h3 {
+  font-size: 40px;
+  color: #191919;
+}
+
+.connectWallet p {
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.connectWallet button {
+  border: 1px solid #191919;
+  color: #191919;
+  padding: 12px 25px;
+  font-size: 20px;
+  background-color: transparent;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.connectWallet button:hover {
+  color: #184ac0;
+  border: 1px solid #184ac0;
+}

@@ -1,0 +1,31 @@
+.beneficiaryContaier {
+  background-color: transparent;
+}
+
+.beneficiaryContaier:hover {
+  cursor: pointer;
+}
+
+.beneficiaryBox {
+  padding: 30px;
+  border-radius: 50%;
+  background-color: #000128;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.beneficiaryBox p {
+  text-align: center;
+  font-size: 24px;
+}
+
+.name {
+  text-align: center;
+  font-size: 18px;
+  margin: 5px 0px;
+}

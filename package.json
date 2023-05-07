@@ -9,8 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.13",
+    "@moralisweb3/common-evm-utils": "^2.19.0",
+    "@pushprotocol/restapi": "^1.2.10",
+    "@rainbow-me/rainbowkit": "^0.12.12",
+    "alchemy-sdk": "^2.8.2",
+    "ethers": "^5",
+    "graphql": "^16.6.0",
+    "moralis": "^2.19.0",
     "next": "13.3.1",
+    "node-fetch": "^3.3.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "wagmi": "^0.12.12",
+    "web3.storage": "^4.5.4"
   }
 }

@@ -1,0 +1,47 @@
+.hero {
+  background-image: url("/backgrounds/starBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  padding-bottom: 80px;
+}
+
+.content {
+  width: 90%;
+  margin: 0 auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wings {
+  width: 600px;
+}
+
+.content h2 {
+  color: #fff;
+  font-size: 80px;
+  margin: 15px 0px;
+}
+
+.content p {
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  width: 70%;
+}
+
+.content a {
+  background-color: #303f9f;
+  font-size: 18px;
+  padding: 18px 16px;
+  border-radius: 14px;
+  color: #fff;
+  margin-top: 40px;
+}
+
+.content a:hover {
+  color: #303f9f;
+  background-color: #fff;
+}

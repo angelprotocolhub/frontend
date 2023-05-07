@@ -1,0 +1,31 @@
+.lowerButton {
+  position: fixed;
+  bottom: 0;
+  padding: 20px 20px;
+  text-align: center;
+  width: 70%;
+  background-color: #fff;
+}
+
+.lowerButton button {
+  background-color: #191919;
+  padding: 14px 30px;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.lowerButton button:hover {
+  color: #10c6c6;
+}
+
+.information {
+  position: fixed;
+  top: 30%;
+  right: 27%;
+}
+
+.information img {
+  width: 30px;
+  height: 30px;
+}

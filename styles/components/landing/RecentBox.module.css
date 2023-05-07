@@ -1,0 +1,30 @@
+.recentBox {
+  box-shadow: 1.6px 1.6px 7px 1.6px #d8d8d87e;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 200px;
+  border-radius: 30px;
+  margin-right: 25px;
+}
+
+.recentBox div {
+  margin: 10px 0px;
+}
+
+.recentBox h4 {
+  color: #a6cfd5;
+  font-size: 13px;
+  font-weight: lighter;
+  margin-bottom: 5px;
+  /* width: 50%; */
+}
+
+.recentBox p {
+  width: 50%;
+  color: #0f084b;
+  font-weight: 500;
+  font-size: 16px;
+}

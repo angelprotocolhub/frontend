@@ -1,0 +1,9 @@
+.transferAssets {
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  width: 100%;
+  margin-left: 19%;
+}

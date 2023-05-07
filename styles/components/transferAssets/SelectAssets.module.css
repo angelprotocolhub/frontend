@@ -1,0 +1,196 @@
+.selectCrypto {
+  padding: 40px;
+  background-color: #1c1c1c;
+  box-shadow: 1px 1px 1px 1px #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 24px;
+  width: 500px;
+  height: 450px;
+}
+
+.selectAsset {
+  margin: 20px 0px;
+  font-size: 18px;
+  color: #fff !important;
+}
+
+.selectAsset:hover {
+  color: rgb(23, 23, 103);
+}
+
+.selectCrypto input {
+  outline: none;
+  border: none;
+  font-size: 19px;
+  color: #ffffff;
+  margin: 20px 0px;
+  width: 50%;
+  background-color: transparent;
+}
+
+.selectCrypto input::placeholder {
+  color: #b8b8b8;
+  font-size: 16px;
+}
+
+.closeButton {
+  margin: 10px 0px;
+  width: 10px;
+}
+
+.send button {
+  background-color: #fff;
+  padding: 12px 19px 7px 19px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.send button:hover {
+  background-color: #434343;
+}
+
+.supportedAssets {
+  overflow-y: auto;
+}
+
+.supportedAssets p {
+  color: #fff;
+}
+
+.nftList {
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nftList p {
+  color: #fff;
+}
+
+.nftBox {
+  margin: 25px 10px;
+}
+
+.nftBox h3 {
+  font-size: 17px;
+  color: #fff;
+  margin: 6px 0;
+  text-align: center;
+}
+
+.nftBox p {
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+
+.nftBox img {
+  width: 120px;
+  height: 100px;
+}
+
+.time {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.time p {
+  color: #ffffff73;
+}
+
+.asset {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #434343;
+  margin: 20px 0px;
+  width: 300px !important;
+}
+
+.asset:hover {
+  scale: 1.05;
+}
+
+.asset img {
+  width: 60px !important;
+  height: 60px !important;
+  padding: 10px !important;
+}
+
+.asset p {
+  font-size: 22px;
+}
+
+.inputAddress {
+  font-size: 18px !important;
+  width: 300px !important;
+}
+
+.enterButton {
+  background-color: #f1f1f1;
+  color: #000000;
+  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 14px;
+}
+
+.claimCode {
+  width: 180px !important;
+}
+
+.approve {
+  margin: 0px 15px !important;
+  font-size: 17px;
+  color: #181818;
+  padding: 10px 18px !important;
+}
+
+.selectedAsset {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectedAsset p {
+  margin-right: 15px;
+  color: #fff;
+}
+
+.selectedAsset img {
+  margin-right: 10px;
+}
+
+.success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 92%;
+  margin: 15px 0;
+}
+
+.success img {
+  width: 130px;
+  height: 130px;
+}
+
+.success h4 {
+  color: #fff;
+  margin: 20px 0px;
+  font-size: 33px;
+}
+
+.success p {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  margin: 5px 0px;
+}

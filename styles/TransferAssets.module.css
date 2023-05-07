@@ -1,0 +1,106 @@
+.transferAssets {
+  display: flex;
+  flex-direction: row;
+}
+
+.beneficiaries {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 50px;
+  padding-left: 80px;
+}
+
+.beneficiaries h3 {
+  font-size: 30px;
+  margin: 20px 0px;
+}
+
+.content {
+  width: 100%;
+  margin-left: 19%;
+}
+
+.transferOptions {
+  margin: 80px 0px;
+
+  padding-left: 80px;
+}
+
+.transferOptions h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.transferOptionsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.option {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px 10px;
+  border-bottom: 0.5px solid #b2b2b2a3;
+  box-sizing: border-box;
+  margin-right: 100px;
+}
+
+.optionClicked {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px 15px;
+  border-bottom: 0.5px solid #b2b2b2a3;
+  box-sizing: border-box;
+  margin-right: 100px;
+  background-color: #f5f5f5;
+}
+
+.option:hover {
+  scale: 1.04;
+}
+
+.optionClicked:hover {
+  scale: 1.04;
+}
+
+.option img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.optionClicked img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.option .text {
+  margin: 0px 10px;
+}
+
+.optionClicked .text {
+  margin: 0px 10px;
+}
+
+.text h4 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.text p {
+  font-size: 14px;
+  color: #68686892;
+}
+
+.forward {
+  width: 33px !important;
+  height: 43px;
+  margin-left: 30px;
+}

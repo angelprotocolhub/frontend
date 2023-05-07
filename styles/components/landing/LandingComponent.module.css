@@ -1,0 +1,47 @@
+.credits {
+  padding: 10px;
+}
+
+.creditBoxes {
+  padding: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  overflow-x: scroll;
+}
+
+.background {
+  padding: 50px 60px;
+  background-color: #f8f8f8;
+}
+
+.background h2 {
+  color: #0d0221;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.debitBackground {
+  padding: 30px 60px;
+}
+
+.debitBackground h2 {
+  color: #0d0221;
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.debits {
+  padding: 10px;
+}
+
+.debitBoxes {
+  padding: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  overflow-x: scroll;
+}

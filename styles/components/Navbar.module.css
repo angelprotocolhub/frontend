@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: transparent;
+  height: 100px;
+  margin-bottom: 50px;
+}
+
+.navbar img {
+  width: 60px;
+  height: 60px;
+}
+
+.navLinks a {
+  margin: 0px 13px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.navLinks a:hover {
+  font-weight: bold;
+}
+
+.signIn {
+  display: block;
+  margin: 0px 8px;
+  color: #1a1b41;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 14px;
+}
+
+.signIn:hover {
+  color: #fff;
+  background-color: #1a1b41;
+}

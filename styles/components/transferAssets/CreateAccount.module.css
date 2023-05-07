@@ -1,0 +1,46 @@
+.createAccount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.createAccount h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.createAccount p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.userName {
+  margin-top: 30px;
+  font-size: 17px !important;
+}
+
+.createAccount input {
+  padding: 12px 14px;
+  border: none;
+  box-shadow: 1px 1px 5px 0.4px #cecece;
+  border-radius: 10px;
+  width: 20%;
+  font-size: 18px;
+  margin: 30px 0px;
+}
+
+.createAccount input:focus {
+  border: none;
+  outline: none;
+}
+
+.createAccount button {
+  background-color: #191919;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 20px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}

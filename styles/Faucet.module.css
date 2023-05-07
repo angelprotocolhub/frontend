@@ -1,0 +1,71 @@
+.content {
+  width: 100%;
+  margin-left: 19%;
+}
+
+.faucet {
+  padding-left: 80px;
+}
+
+.faucet h3 {
+  margin: 170px 0px 40px 0px;
+  font-size: 40px;
+}
+
+.assetsContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.left {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 50px;
+}
+
+.right {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.asset {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 40px 0px;
+}
+
+.asset img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.asset input {
+  box-shadow: 1px 1px 4px 1px #e0e0e0;
+  outline: none;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 12px;
+  margin-right: 20px;
+  color: #000;
+}
+
+.asset input::placeholder {
+  color: #afafaf;
+}
+
+.asset button {
+  background-color: #1856b3;
+  color: #fff;
+  padding: 10px 18px;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+.asset button:hover {
+  background-color: #071d3f;
+}
