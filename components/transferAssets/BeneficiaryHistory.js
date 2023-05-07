@@ -13,6 +13,7 @@ export const BeneficiaryHistory = ({ beneficiary, txOptions }) => {
       variables: { user: address, beneficiary: beneficiary },
     });
 
+  if (usersTransaction) console.log(usersTransaction);
   return (
     <div className={styles.container}>
       {usersTransaction && usersTransaction.transactionEntities.length == 0 && (
@@ -34,15 +35,11 @@ export const BeneficiaryHistory = ({ beneficiary, txOptions }) => {
               let senderOrRecipient;
               if (sender.toLocaleLowerCase() == address.toLocaleLowerCase()) {
                 senderOrRecipient = true;
-
-                console.log("TRUEEEEE");
               }
               if (
                 recipient.toLocaleLowerCase() == address.toLocaleLowerCase()
               ) {
                 senderOrRecipient = false;
-
-                console.log("FALSEEEEE");
               }
 
               return (
