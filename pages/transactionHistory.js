@@ -72,94 +72,96 @@ export default function TransactionHistory() {
                 {/* TRANSACTIONS */}
                 <div className={styles.transactionsContainer}>
                   <div className={styles.transactionList}>
-                    {txHistory
-                      ? txHistory.transactionEntities.map((tx) => {
-                          let color;
-                          let sign;
-                          let fromOrTo;
-                          if (tx.txType) {
-                            color = "#191919";
-                          }
+                    {txHistory ? (
+                      txHistory.transactionEntities.map((tx) => {
+                        let color;
+                        let sign;
+                        let fromOrTo;
+                        if (tx.txType) {
+                          color = "#191919";
+                        }
 
-                          if (tx.recipient == address.toLocaleLowerCase()) {
-                            color = "#06BF3D";
-                            if (tx.status != 3) sign = "+";
-                            fromOrTo = "From";
-                          }
-                          if (tx.sender == address.toLocaleLowerCase()) {
-                            color = "#C51010";
-                            if (tx.status != 3) sign = "-";
-                            fromOrTo = "To";
-                          }
+                        if (tx.recipient == address.toLocaleLowerCase()) {
+                          color = "#06BF3D";
+                          if (tx.status != 3) sign = "+";
+                          fromOrTo = "From";
+                        }
+                        if (tx.sender == address.toLocaleLowerCase()) {
+                          color = "#C51010";
+                          if (tx.status != 3) sign = "-";
+                          fromOrTo = "To";
+                        }
 
-                          if (tx.status == 3) {
-                            color = "#9A640E";
-                          }
-                          return (
-                            <div
-                              className={
-                                clicked == tx.id ? styles.txClicked : styles.tx
-                              }
-                              onClick={() => {
-                                setTxSelected({
-                                  from: tx.senderUserName,
-                                  to:
-                                    tx.recipientUserName == "nousername"
-                                      ? tx.recipient
-                                      : tx.recipientUserName,
-                                  sender: tx.sender,
-                                  recipient: tx.recipient,
-                                  asset: ASSETS[tx.asset]
+                        if (tx.status == 3) {
+                          color = "#9A640E";
+                        }
+                        return (
+                          <div
+                            className={
+                              clicked == tx.id ? styles.txClicked : styles.tx
+                            }
+                            onClick={() => {
+                              setTxSelected({
+                                from: tx.senderUserName,
+                                to:
+                                  tx.recipientUserName == "nousername"
+                                    ? tx.recipient
+                                    : tx.recipientUserName,
+                                sender: tx.sender,
+                                recipient: tx.recipient,
+                                asset: ASSETS[tx.asset]
+                                  ? ASSETS[tx.asset]
+                                  : truncateAddr(tx.asset),
+                                txType: tx.txType,
+                                amountOrTokenId: tx.txType
+                                  ? tx.amountOrTokenId
+                                  : tx.amountOrTokenId / 10 ** 18,
+                                narration: tx.narration,
+                                txReference: tx.txReference,
+                                status: tx.status,
+                                color: color,
+                                sign: sign,
+                                time: convertTimeStampToReadableDate(tx.time),
+                                fromOrTo: fromOrTo,
+                              });
+                              setClicked(tx.id);
+                            }}
+                          >
+                            <img src={DEFAULT_PROFILE_IMAGE} />
+
+                            <div className={styles.info}>
+                              <h3>{addAngelSuffix(tx.senderUserName)}</h3>
+
+                              <div>
+                                <p className={styles.anotherBlue}>
+                                  {ASSETS[tx.asset]
                                     ? ASSETS[tx.asset]
-                                    : truncateAddr(tx.asset),
-                                  txType: tx.txType,
-                                  amountOrTokenId: tx.txType
-                                    ? tx.amountOrTokenId
-                                    : tx.amountOrTokenId / 10 ** 18,
-                                  narration: tx.narration,
-                                  txReference: tx.txReference,
-                                  status: tx.status,
-                                  color: color,
-                                  sign: sign,
-                                  time: convertTimeStampToReadableDate(tx.time),
-                                  fromOrTo: fromOrTo,
-                                });
-                                setClicked(tx.id);
-                              }}
-                            >
-                              <img src={DEFAULT_PROFILE_IMAGE} />
-
-                              <div className={styles.info}>
-                                <h3>{addAngelSuffix(tx.senderUserName)}</h3>
-
-                                <div>
-                                  <p className={styles.anotherBlue}>
-                                    {ASSETS[tx.asset]
-                                      ? ASSETS[tx.asset]
-                                      : truncateAddr(tx.asset)}
-                                  </p>
-                                  <p>
-                                    {convertTimeStampToReadableDate(tx.time)}
-                                  </p>
-                                </div>
-                              </div>
-
-                              <div className={styles.amount}>
-                                <h3>{tx.txType ? "Token ID" : "Amount"}</h3>
-                                <p
-                                  className={styles.anotherBlue}
-                                  style={{ color: color }}
-                                >
-                                  {!tx.txType && sign}{" "}
-                                  {tx.txType
-                                    ? tx.amountOrTokenId
-                                    : tx.amountOrTokenId / 10 ** 18}
+                                    : truncateAddr(tx.asset)}
                                 </p>
+                                <p>{convertTimeStampToReadableDate(tx.time)}</p>
                               </div>
                             </div>
-                          );
-                        })
-                      : "Getting Transactions..."}
+
+                            <div className={styles.amount}>
+                              <h3>{tx.txType ? "Token ID" : "Amount"}</h3>
+                              <p
+                                className={styles.anotherBlue}
+                                style={{ color: color }}
+                              >
+                                {!tx.txType && sign}{" "}
+                                {tx.txType
+                                  ? tx.amountOrTokenId
+                                  : tx.amountOrTokenId / 10 ** 18}
+                              </p>
+                            </div>
+                          </div>
+                        );
+                      })
+                    ) : (
+                      <p style={{ marginLeft: "20px" }}>
+                        Getting Transactions...
+                      </p>
+                    )}
                   </div>
 
                   {txSelecteed && (

@@ -82,55 +82,57 @@ export default function Claims() {
                           No Claim Available
                         </p>
                       )}
-                    {claimsData
-                      ? claimsData.transactionEntities.map((claim) => {
-                          return (
-                            <div
-                              className={
-                                clicked == claim.id
-                                  ? styles.claimClicked
-                                  : styles.claim
-                              }
-                              onClick={() => {
-                                setClaimSelected({
-                                  from: claim.senderUserName,
-                                  asset: ASSETS[claim.asset]
-                                    ? ASSETS[claim.asset]
-                                    : truncateAddr(claim.asset),
-                                  txType: claim.txType,
-                                  amountOrTokenId: claim.txType
-                                    ? claim.amountOrTokenId
-                                    : claim.amountOrTokenId / 10 ** 18,
-                                  narration: claim.narration,
-                                  txReference: claim.txReference,
-                                });
-                                setClicked(claim.id);
-                              }}
-                              key={claim.id}
-                            >
-                              <img src={DEFAULT_PROFILE_IMAGE} />
+                    {claimsData ? (
+                      claimsData.transactionEntities.map((claim) => {
+                        return (
+                          <div
+                            className={
+                              clicked == claim.id
+                                ? styles.claimClicked
+                                : styles.claim
+                            }
+                            onClick={() => {
+                              setClaimSelected({
+                                from: claim.senderUserName,
+                                asset: ASSETS[claim.asset]
+                                  ? ASSETS[claim.asset]
+                                  : truncateAddr(claim.asset),
+                                txType: claim.txType,
+                                amountOrTokenId: claim.txType
+                                  ? claim.amountOrTokenId
+                                  : claim.amountOrTokenId / 10 ** 18,
+                                narration: claim.narration,
+                                txReference: claim.txReference,
+                              });
+                              setClicked(claim.id);
+                            }}
+                            key={claim.id}
+                          >
+                            <img src={DEFAULT_PROFILE_IMAGE} />
 
-                              <div className={styles.info}>
-                                <h3>{addAngelSuffix(claim.senderUserName)}</h3>
-                                <p className={styles.anotherBlue}>
-                                  {ASSETS[claim.asset]
-                                    ? ASSETS[claim.asset]
-                                    : truncateAddr(claim.asset)}
-                                </p>
-                              </div>
-
-                              <div className={styles.amount}>
-                                <h3>{claim.txType ? "Token ID" : "Amount"}</h3>
-                                <p className={styles.specificAmount}>
-                                  {claim.txType
-                                    ? claim.amountOrTokenId
-                                    : claim.amountOrTokenId / 10 ** 18}
-                                </p>
-                              </div>
+                            <div className={styles.info}>
+                              <h3>{addAngelSuffix(claim.senderUserName)}</h3>
+                              <p className={styles.anotherBlue}>
+                                {ASSETS[claim.asset]
+                                  ? ASSETS[claim.asset]
+                                  : truncateAddr(claim.asset)}
+                              </p>
                             </div>
-                          );
-                        })
-                      : "Getting Claims..."}
+
+                            <div className={styles.amount}>
+                              <h3>{claim.txType ? "Token ID" : "Amount"}</h3>
+                              <p className={styles.specificAmount}>
+                                {claim.txType
+                                  ? claim.amountOrTokenId
+                                  : claim.amountOrTokenId / 10 ** 18}
+                              </p>
+                            </div>
+                          </div>
+                        );
+                      })
+                    ) : (
+                      <p style={{ marginLeft: "20px" }}>Getting Claims...</p>
+                    )}
                   </div>
 
                   {claimSelected && (
