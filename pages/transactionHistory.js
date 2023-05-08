@@ -227,12 +227,15 @@ export default function TransactionHistory() {
                           <div className={styles.status}>
                             <div className={styles.pendingCircle}></div>
                             <p>Pending</p>
-                            <button
-                              disabled={!reclaimFunds}
-                              onClick={() => reclaimFunds()}
-                            >
-                              Reclaim
-                            </button>
+                            {txSelecteed.sender ==
+                              address.toLocaleLowerCase() && (
+                              <button
+                                disabled={!reclaimFunds}
+                                onClick={() => reclaimFunds()}
+                              >
+                                Reclaim
+                              </button>
+                            )}
                           </div>
                         )}
 
