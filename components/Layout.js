@@ -29,14 +29,13 @@ export const Layout = ({ children }) => {
 
   return (
     <div>
-      {/* {isMobile ? (
+      {isMobile ? (
         <div className="smallScreen">
           <p>Small screen devices are not supported.</p>
         </div>
       ) : (
         children
-      )} */}
-      {children}
+      )}
     </div>
   );
 };
