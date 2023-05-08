@@ -1,5 +1,6 @@
 import styles from "../../styles/components/transferAssets/BeneficiaryTransferBox.module.css";
 import {
+  ASSETS,
   convertTimeStampToReadableDate,
   getImage,
   truncateAddr,
@@ -26,11 +27,7 @@ export const BeneficiaryTransferBox = ({
           <div className={styles.top}>
             <div className={styles.miniBox}>
               <span>Asset</span>
-              <p>
-                {!txType
-                  ? getAssetName(asset.toLowerCase())
-                  : truncateAddr(asset)}
-              </p>
+              <p>{!txType ? ASSETS[asset] : truncateAddr(asset)}</p>
             </div>
 
             <div className={styles.miniBox}>

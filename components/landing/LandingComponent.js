@@ -50,7 +50,7 @@ export const LandingComponent = () => {
             {getDebitsLoading ? (
               "Getting Recent Debits...."
             ) : debits.transactionEntities.length == 0 ? (
-              <p>No Recent Credits</p>
+              <p>No Recent Debits</p>
             ) : (
               debits.transactionEntities.map(
                 ({ sender, recipient, asset, amountOrTokenId, txType }) => (

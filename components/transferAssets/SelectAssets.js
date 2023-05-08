@@ -100,7 +100,12 @@ export const SelectAssets = ({ close, beneficiary, txOptions, blur }) => {
     args: [ANGEL_ADDRESS, amount && ethers.utils.parseEther(amount).toString()],
   });
 
-  const { write: approve } = useContractWrite(approveConfig);
+  const { write: approve } = useContractWrite({
+    ...approveConfig,
+    onSuccess() {
+      sendCrypto();
+    },
+  });
 
   const { config: approveNFTConfig } = usePrepareContractWrite({
     address: assetAddress,
@@ -112,7 +117,12 @@ export const SelectAssets = ({ close, beneficiary, txOptions, blur }) => {
   console.log(tokenId, "TOKEN IDSDDD");
   console.log(assetAddress, "asst addr");
 
-  const { write: approveNFT } = useContractWrite(approveNFTConfig);
+  const { write: approveNFT } = useContractWrite({
+    ...approveNFTConfig,
+    onSuccess() {
+      sendNFT();
+    },
+  });
 
   const { data: beneficiaryUserName } = useContractRead({
     address: ANGEL_ADDRESS,
@@ -183,7 +193,13 @@ export const SelectAssets = ({ close, beneficiary, txOptions, blur }) => {
               <h4>Sent</h4>
               <p>
                 <b>
-                  Unrelated NFT. Token ID: 3 is on its way to winifred.angel{" "}
+                  Unrelated NFT. Token ID: 3 is on its way to
+                  <b>
+                    {" "}
+                    {beneficiaryUserName
+                      ? beneficiaryUserName
+                      : truncateAddr(beneficiary)}
+                  </b>
                 </b>
 
                 <p>One Time Claim Code: {claimCode && claimCode}</p>

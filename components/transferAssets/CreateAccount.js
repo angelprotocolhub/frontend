@@ -41,11 +41,9 @@ export const CreateAccount = () => {
       userAddress: USER_ADDRESS_IN_CAIP, // user address in CAIP
       onSuccess: () => {
         console.log("opt in success");
-        setSigningUp(false);
       },
       onError: () => {
         console.error("opt in error");
-        setSigningUp(false);
       },
       env: "staging",
     });

@@ -66,10 +66,13 @@ export default function Information() {
   });
 
   async function handleCheck() {
+    await getTxDetails();
     setTxSelected(txDetails);
 
-    setSenderAddress(txDetails.sender);
-    setRecipientAddress(txDetails.recipient);
+    if (txDetails) {
+      setSenderAddress(txDetails.sender);
+      setRecipientAddress(txDetails.recipient);
+    }
 
     await getSenderUserName();
     await getRecipientUserName();

@@ -53,10 +53,8 @@ const GET_ALL_USERS_TX = gql`
     transactionEntities(
       where: {
         or: [
-          { sender: $user }
-          { recipient: $user }
-          { sender: $beneficiary }
-          { recipient: $beneficiary }
+          { sender: $user, recipient: $beneficiary }
+          { sender: $beneficiary, recipient: $user }
         ]
       }
       orderBy: time
@@ -83,7 +81,7 @@ const GET_USER_CLAIMS = gql`
     transactionEntities(
       where: { and: [{ recipient: $user }, { status: $status }] }
       orderBy: time
-      orderDirection: asc
+      orderDirection: desc
     ) {
       id
       sender
@@ -106,7 +104,7 @@ const GET_USERS_TRANSACTIONS = gql`
     transactionEntities(
       where: { or: [{ sender: $user }, { recipient: $user }] }
       orderBy: time
-      orderDirection: asc
+      orderDirection: desc
     ) {
       id
       sender

@@ -24,7 +24,7 @@ export default function Faucet() {
     address: assetAddress,
     abi: MOCK_LIVE_TOKEN_ABI,
     functionName: "mintFree",
-    args: [address, amount],
+    args: [address, amount && ethers.utils.parseEther(amount)],
   });
 
   const { write: mintFree } = useContractWrite(mintFreeConfig);
@@ -60,7 +60,7 @@ export default function Faucet() {
                         <input
                           placeholder="Amount"
                           onChange={(e) => {
-                            setAmount(ethers.utils.parseEther(e.target.value));
+                            setAmount(e.target.value);
                             setAssetAddress(ASSETS_NAME["ANGEL"]);
                           }}
                         />
